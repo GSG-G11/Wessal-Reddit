@@ -1,4 +1,4 @@
 const app = require('./app');
 
-const port=process.env.PORT||8080;
-app.listen(port, () => { console.log('server is listinig on http://localhost:8080') })
+const port = app.get('port')
+app.listen(port, () => { console.log(`server is listinig on http://localhost:${port}`) })
