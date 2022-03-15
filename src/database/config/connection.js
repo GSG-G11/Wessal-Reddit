@@ -1,9 +1,10 @@
-require('env2')('.env')
+// require('env2')('.env')
 const { Pool } = require('pg')
  
 let dbURL = ''
 
 const {NODE_ENV , DEV_DB_URL , DATABASE_URL , TEST_DB_URL } = process.env
+
 
 if(NODE_ENV==='dev'){
     dbURL=DEV_DB_URL;
@@ -24,5 +25,6 @@ const options = {
     ssl: false
 }
 
-const connection = new Pool('options')
+const connection = new Pool(options)
+
 module.export = { connection }

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev" : "cross-env nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev" : "cross-env NODE_ENV=dev nodemon src/index.js",
+    "test": " NODE_ENV=test"
   },
   "repository": {
     "type": "git",
