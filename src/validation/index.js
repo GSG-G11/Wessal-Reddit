@@ -1,3 +1,3 @@
-const {signUpValiadation} = require('./signUpSchema')
+const {signUpSchema} = require('./signUpSchema')
 
-module.exports = {signUpValiadation}
+module.exports = {signUpSchema}
