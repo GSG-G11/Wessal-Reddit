@@ -1,3 +1,3 @@
-const hashPassword=require('./hashPassword')
+const hashPassword = require('./hashPassword')
 
-module.exports={hashPassword}
+module.exports=hashPassword

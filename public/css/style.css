@@ -18,7 +18,7 @@ html {
 /* border: 5px solid rgb(111, 111, 180); */
 background-color: hsl(0, 0%, 90%);
 border-radius: 5px;
-width: 30%;
+width: 35%;
 margin-left: 30px;
 padding: 10px;
 height: 350px; 
@@ -35,6 +35,17 @@ transform: translate(0, -50%);
     justify-content: space-between;
     margin-top: 10px;
 }
+
+.signInContainer{
+    display: flex;
+    flex-direction: column;
+    /* border: 3px solid green; */
+    height: 170px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
 
 input,button{
     border-radius: 7px;
