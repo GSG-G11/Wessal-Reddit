@@ -2,7 +2,8 @@ const bcrypt = require('bcryptjs')
 
 const hashPassword = (password) => 
 {
-  return bcrypt.hash(10,password)
+  console.log(password)
+  return bcrypt.hash(password,10)
     
 }
-module.exports={hashPassword}
+module.exports=hashPassword
