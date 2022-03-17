@@ -1,3 +1,4 @@
+
 const signInContainer=document.querySelector('.signInContainer')
 const username=document.querySelector('.username')
 const password=document.querySelector('.password')
@@ -17,5 +18,11 @@ console.log(data)
         body:JSON.stringify(data)
     })
     .then((res)=>res.json())
+    .then(obj=>{
+        if(obj.redirect){
+        location.href=obj.redirct
+        }
+    }
+    )
     .catch((err)=>console.log(err))
 })
