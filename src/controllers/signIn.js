@@ -23,7 +23,7 @@ signInSchema.validateAsync(req.body)
                 else{
                     res.cookie('username', token)
                     res.json({
-                        redirect:'/addPost'
+                        redirect:'/addPosts'
                     })
                 }
             })

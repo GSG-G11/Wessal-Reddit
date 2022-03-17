@@ -30,7 +30,7 @@ html {
   /* margin-top: 20px; */
 }
 
-.title,.content {
+.title,.content,.userId {
   /* border: 2px solid purple; */
   width: 250px;
    padding: 7px; 
