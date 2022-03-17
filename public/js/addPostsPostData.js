@@ -1,17 +1,18 @@
 const addPostscontainer=document.querySelector('.addPostscontainer')
 const title =document.querySelector('.title')
 const content = document.querySelector('.content')
-const userId = document.querySelector('.userId')
+
+console.log(title)
 
 addPostscontainer.addEventListener('submit',(e)=>{
     e.preventDefault()
 
 const data = {
-    userId:userId.value,
     title:title.value,
     content:content.value
 }
-console.log(data);
+console.log(data)
+;
 
 fetch('/addPosts',{
     method:'POST',

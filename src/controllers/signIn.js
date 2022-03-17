@@ -16,12 +16,12 @@ signInSchema.validateAsync(req.body)
 .then((hashPassword)=>comparePassword(password,hashPassword))
 .then((isEqual)=>{
     if(isEqual){
-            jwt.sign(username,secreatKey,(err,token)=>{
+            jwt.sign(id,secreatKey,(err,token)=>{
                 if(err){
                     console.log(err)
                 }
                 else{
-                    res.cookie('username', token)
+                    res.cookie('token', token)
                     res.json({
                         redirect:'/addPosts'
                     })

@@ -4,4 +4,5 @@ const addNewUserQuery = ({username,hashedPassword}) => connection.query('INSERT 
 
 
 
+
 module.exports =  {addNewUserQuery}
