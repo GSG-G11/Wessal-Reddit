@@ -13,19 +13,19 @@ console.log(req.body);
 .then(()=> isUserNameAvaliableQuery({username}))
 .then(()=> hashPassword(password))
 .then((hashedPassword)=>addNewUserQuery({username,hashedPassword}))
-.then(()=>{
-    jwt.sign(username,secreatKey,(err,token)=>{
+.then((data)=>{
+    const userId=data.rows[0].id
+    jwt.sign({userId},secreatKey,(err,token)=>{
         if(err){
             console.log(err)
         }
         else{
-            res.cookie('username', token)
+            res.cookie('token', token)
             res.json({
                 redirect:'/addPosts'
             })
         }
-    })
-    
+    })    
 })
 .catch((err)=>res.json`${err}`)
 
