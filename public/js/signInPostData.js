@@ -20,7 +20,7 @@ console.log(data)
     .then((res)=>res.json())
     .then(obj=>{
         if(obj.redirect){
-        location.href=obj.redirct
+        location.href=obj.redirect
         }
     }
     )
